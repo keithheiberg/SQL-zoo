@@ -1,5 +1,6 @@
 USE db_zoo;
 SELECT * FROM tbl_habitat;
+SELECT * FROM tbl_specialist WHERE specialist_contact = '384-576-2899';
 SELECT * FROM tbl_species WHERE species_order = 3;
 SELECT * FROM tbl_nutrition WHERE nutrition_cost < 600.01;
 SELECT * FROM tbl_nutrition WHERE nutrition_id > 2201 AND nutrition_id < 2206;
