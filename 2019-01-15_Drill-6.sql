@@ -1,6 +1,6 @@
 USE db_zoo;
 /* Drill 6, p. 72 */
-SELECT * FROM tbl_species WHERE species_name = 'penguin';
-SELECT * FROM tbl_species WHERE species_care = 'care_6';
-SELECT * FROM tbl_care WHERE care_id = 'care_6';
-SELECT * FROM tbl_specialist WHERE specialist_id = 1;
+SELECT specialist_fname, specialist_lname, specialist_contact 
+FROM ((tbl_specialist 
+INNER JOIN tbl_care ON care_specialist = tbl_specialist.specialist_id) 
+INNER JOIN tbl_species ON species_care = 'care_6');
